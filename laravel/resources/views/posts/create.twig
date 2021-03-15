@@ -1,0 +1,18 @@
+{% extends "templat" %}
+{% block content %}
+    <h2 class="text-gray-700 text-4xl mb-3 font-semibold border-b pb-3">Ajouter un article<h1>
+    <form action="{{ route('posts.store') }}" method="POST">
+        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+        <input type="text" name="subject" placeholder="Titre"
+               class="w-full px-3 py-2 mb-3 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none
+               focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500">
+        <textarea name="content" id="content" cols="30" rows="10"
+                  placeholder="Contenu"
+                  class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md
+                  focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500"></textarea>
+        <div class="flex justify-end">
+            <button type="submit" class="bg-gradient-to-r from-indigo-500 to-blue-600 text-white font-semibold rounded-md
+         py-1 px-3 hover:to-indigo-500">Valider</button>
+        </div>
+    </form>
+{% endblock %}

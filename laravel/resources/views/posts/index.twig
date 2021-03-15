@@ -1,0 +1,32 @@
+{% extends "template" %}
+{% block content %}
+    <a href="{{ route('posts.create') }}"
+       class="bg-gradient-to-r from-indigo-500 to-blue-600 text-white font-semibold rounded-md py-1 px-3
+       hover:to-indigo-500">
+        Ajouter un article
+    </a>
+    <table class="w-full table-auto mt-5">
+        <thead>
+        <tr class="bg-gray-200 rounded text-left">
+            <th class="border p-2">Titre</th>
+            <th class="border p-2">Contenu</th>
+            <th class="border p-2">Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for post in posts %}
+            <tr>
+                <td class="border p-2">
+                    {{ post.subject }}
+                </td>
+                <td class="border p-2">
+                    {{ post.content }}
+                </td>
+                <td class="border p-2">
+
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
