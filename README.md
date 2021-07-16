@@ -10,7 +10,7 @@ Le projet est un blog très basique dans lequel on ajoute et on visualise des ar
 
 | Dépendance | Version |
 | ------ | ------ |
-| NodeJS | >= 12 |
+| NodeJS | 12.x |
 | PHP | 7.3 |
 
 #### Dossier Laravel
